@@ -1,0 +1,292 @@
+body {
+    background: url("/imgs/games-valorant-capa.png") no-repeat center center / cover;
+}
+
+.sec {
+    display: grid;
+    grid-template-rows: 150px 1fr;
+    justify-items: center;
+    width: 100%;
+    height: 100vh;
+    /* background: linear-gradient(315deg, rgba(97, 67, 133, .7) 0%, rgba(25, 25, 25, .7) 90%); */
+    background: linear-gradient(315deg, rgba(25, 25, 25, .7) 0%, rgba(97, 67, 133, .6) 90%),
+        url(https://grainy-gradients.vercel.app/noise.svg);
+}
+
+.container {
+    /* height: 100svh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #f8f8f8;
+    max-width: 1450px;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 50px;
+    gap: 10px;
+    padding: 15px;
+    border-radius: 25px;
+
+    background: linear-gradient(315deg, rgba(25, 25, 25, .3) 0%, rgba(97, 67, 133, .8) 90%),
+        url(https://grainy-gradients.vercel.app/noise.svg);
+
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.mainContent {
+    display: flex;
+    gap: 25px;
+}
+
+.productImg {
+    width: 50%;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.productImg img {
+    width: 100%;
+    transition: .25s ease;
+}
+
+.productImg:hover img {
+    scale: 1.05;
+}
+
+.productDetails {
+    width: 50%;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.productInfo {
+    display: grid;
+    gap: 5px;
+}
+
+.productTitle {}
+
+.productDescription {}
+
+.elos {
+    display: grid;
+    grid-template-columns: 1fr 150px 1fr;
+    width: 100%;
+}
+
+.elos img {
+    width: 150px;
+    transition: .25s ease;
+}
+
+.elos img:hover {
+    scale: 1.1;
+}
+
+.eloAtual,
+.eloDesejado,
+.icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    text-align: center;
+}
+
+.elos1 select,
+.elos2 select {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.elos1 select:nth-child(1),
+.elos2 select:nth-child(1) {
+    width: 150px;
+}
+
+.icon i {
+    transition: .25s ease;
+    font-size: 80px;
+}
+
+.icon i:hover {
+    transform: translateX(10px);
+}
+
+.price {
+    display: flex;
+    gap: 5px;
+    font-size: 40px;
+    font-weight: 900;
+}
+
+
+
+
+
+
+
+
+
+.btn {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    background: none;
+    padding: 0;
+    color: #191919;
+    cursor: pointer;
+    --button-text-color: var(--background-color);
+    --button-text-color-hover: var(--button-background-color);
+    --border-color: #7D8082;
+    --button-background-color: #ece8e1;
+    --highlight-color: #ff4655;
+    --button-inner-border-color: transparent;
+    --button-bits-color: var(--background-color);
+    --button-bits-color-hover: var(--button-background-color);
+    position: relative;
+    padding: 8px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    -webkit-transition: all .15s ease;
+    transition: all .15s ease;
+}
+
+.btn a {
+    text-decoration: none;
+    color: #191919;
+}
+
+.btn::before,
+.btn::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: calc(50% - 5px);
+    border: 1px solid var(--border-color);
+    -webkit-transition: all .15s ease;
+    transition: all .15s ease;
+}
+
+.btn::before {
+    top: 0;
+    border-bottom-width: 0;
+}
+
+.btn::after {
+    bottom: 0;
+    border-top-width: 0;
+}
+
+.btn:active,
+.btn:focus {
+    outline: none;
+}
+
+.btn:active::before,
+.btn:active::after {
+    right: 3px;
+    left: 3px;
+}
+
+.btn:active::before {
+    top: 3px;
+}
+
+.btn:active::after {
+    bottom: 3px;
+}
+
+.btn__inner {
+    position: relative;
+    display: block;
+    padding: 20px 30px;
+    background-color: var(--button-background-color);
+    overflow: hidden;
+    -webkit-box-shadow: inset 0px 0px 0px 1px var(--button-inner-border-color);
+    box-shadow: inset 0px 0px 0px 1px var(--button-inner-border-color);
+}
+
+.btn__inner::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 2px;
+    background-color: var(--button-bits-color);
+}
+
+.btn__inner::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 4px;
+    height: 4px;
+    background-color: transparent;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+.btn__slide {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: -1px;
+    left: -8px;
+    width: 0;
+    background-color: var(--highlight-color);
+    -webkit-transform: skew(-15deg);
+    transform: skew(-15deg);
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+.btn__content {
+    position: relative;
+}
+
+.btn:hover {
+    color: var(--button-text-color-hover);
+}
+
+.btn:hover a{
+    color: var(--button-text-color-hover);
+}
+
+.btn:hover .btn__slide {
+    width: calc(100% + 15px);
+}
+
+.btn:hover .btn__inner::after {
+    background-color: var(--button-bits-color-hover);
+}
+
+.btn--light {
+    --button-background-color: var(--background-color);
+    --button-text-color: #191919;
+    --button-inner-border-color: var(--highlight-color);
+    --button-text-color-hover: #ece8e1;
+    --button-bits-color-hover: #ece8e1;
+}
