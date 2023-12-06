@@ -60,15 +60,18 @@ body {
 
 .jett {
     display: grid;
+    /* justify-content: center; */
     position: absolute;
     width: 100%;
     height: calc(100vh);  /* caso eu queirar tirar o navbar só tirar o 150px */
    
     overflow: hidden; /*caso eu queirar tirar o navbar só colocar o hidden */
     z-index: 0;
+
+    /* mix-blend-mode: screen; */
 }
 
-.jett img {
+.jett video {
     position: absolute;
     justify-self: center;
     bottom: -150px;
