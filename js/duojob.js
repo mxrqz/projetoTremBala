@@ -86,7 +86,7 @@ async function teste(value) {
         }
     }
 
-    const jsonFilePath = "./json/elojobPriceLinks.json";
+    const jsonFilePath = "./json/duojobPriceLinks.json";
     const jsonData = await loadJSONFile(jsonFilePath);
 
     if (jsonData) {
