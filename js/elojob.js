@@ -10,10 +10,10 @@ async function teste(value) {
 
         if (firstSelectedOption === "Radiante") {
             secondSelect.innerHTML = '<option value="1">1</option>';
-            image.src = `../imgs/ranks/${firstSelectedOption}.png`
+            image.src = `./imgs/ranks/${firstSelectedOption}.png`
         } else {
             secondSelect.innerHTML = '<option value="1">1</option><option value="2">2</option><option value="3">3</option>';
-            image.src = `../imgs/ranks/${firstSelectedOption}_1.png`
+            image.src = `./imgs/ranks/${firstSelectedOption}_1.png`
         }
     }
 
@@ -27,7 +27,7 @@ async function teste(value) {
         var rank1 = document.getElementById('rank1')
         rank1.textContent = firstSelectedOption + ' ' + secondSelectedOption
 
-        image.src = `../imgs/ranks/${firstSelectedOption}_${secondSelectedOption}.png`
+        image.src = `./imgs/ranks/${firstSelectedOption}_${secondSelectedOption}.png`
     }
 
     function updateSecondSelect() {
@@ -41,10 +41,10 @@ async function teste(value) {
 
         if (firstSelectedOption === "Radiante") {
             secondSelect.innerHTML = '<option value="1">1</option>';
-            image.src = `../imgs/ranks/${firstSelectedOption}.png`
+            image.src = `./imgs/ranks/${firstSelectedOption}.png`
         } else {
             secondSelect.innerHTML = '<option value="1">1</option><option value="2">2</option><option value="3">3</option>';
-            image.src = `../imgs/ranks/${firstSelectedOption}_1.png`
+            image.src = `./imgs/ranks/${firstSelectedOption}_1.png`
         }
     }
 
@@ -59,7 +59,7 @@ async function teste(value) {
         var rank2 = document.getElementById('rank2')
         rank2.textContent = firstSelectedOption + ' ' + secondSelectedOption
 
-        image.src = `../imgs/ranks/${firstSelectedOption}_${secondSelectedOption}.png`
+        image.src = `./imgs/ranks/${firstSelectedOption}_${secondSelectedOption}.png`
     }
 
     if (value == 'updateFirstSelect') {
