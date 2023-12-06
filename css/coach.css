@@ -51,6 +51,7 @@ body {
     justify-items: center;
     width: 100%;
     height: 100vh;
+    /* background: linear-gradient(315deg, rgba(97, 67, 133, .7) 0%, rgba(25, 25, 25, .7) 90%); */
     background: linear-gradient(315deg, rgba(25, 25, 25, .7) 0%, rgba(97, 67, 133, .6) 90%),
         url(https://grainy-gradients.vercel.app/noise.svg);
 }
@@ -93,10 +94,13 @@ body {
     aspect-ratio: 1/1;
     overflow: hidden;
     border-radius: 25px;
+    display: grid;
+    justify-content: center;
 }
 
 .productImg img {
     width: 100%;
+    height: 100%;
     transition: .25s ease;
 }
 
@@ -123,8 +127,6 @@ body {
 .productDescription {}
 
 .elos {
-    display: grid;
-    grid-template-columns: 1fr 150px 1fr;
     width: 100%;
 }
 
@@ -137,9 +139,7 @@ body {
     scale: 1.1;
 }
 
-.eloAtual,
-.eloDesejado,
-.icon {
+.eloAtual {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -148,25 +148,11 @@ body {
     text-align: center;
 }
 
-.elos1 select,
-.elos2 select {
+.elos1 select {
     font-family: 'Red Hat Display', sans-serif;
     font-size: 20px;
     font-weight: 700;
-}
-
-.elos1 select:nth-child(1),
-.elos2 select:nth-child(1) {
-    width: 150px;
-}
-
-.icon i {
-    transition: .25s ease;
-    font-size: 80px;
-}
-
-.icon i:hover {
-    transform: translateX(10px);
+    width: 450px;
 }
 
 .price {

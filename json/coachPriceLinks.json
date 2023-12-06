@@ -1,0 +1,27 @@
+[
+    {
+        "Name": "Basico",
+        "Price": 41,
+        "URL": "https://trem-bala-jobs.pay.yampi.com.br/r/R313JFYJ23"
+    },
+    {
+        "Name": "BasicoEvo",
+        "Price": 62,
+        "URL": "https://trem-bala-jobs.pay.yampi.com.br/r/MQM2RLOZYK"
+    },
+    {
+        "Name": "Intermediario",
+        "Price": 118,
+        "URL": "https://trem-bala-jobs.pay.yampi.com.br/r/77L49L0HOA"
+    },
+    {
+        "Name": "IntermediarioEvo",
+        "Price": 126,
+        "URL": "https://trem-bala-jobs.pay.yampi.com.br/r/HSU3WI2GWD"
+    },
+    {
+        "Name": "Avancado",
+        "Price": 135,
+        "URL": "https://trem-bala-jobs.pay.yampi.com.br/r/LLG8TCU1PG"
+    }
+]
