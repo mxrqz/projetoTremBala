@@ -111,13 +111,15 @@ body {
 
 .list {
     width: fit-content;
-    cursor: pointer;
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
+    cursor: pointer;    
+}
+
+.list a {
+    text-decoration: none;
+    color: #f8f8f8;
     transition: .25s ease;
 }
 
-.list:hover {
+.list:hover a{
     color: #ff4655
 }
