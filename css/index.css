@@ -12,7 +12,7 @@ body {
 .main {
     width: 100%;
     height: 100vh;
-    background: url("../imgs/agents/teste/jett_animate.gif") no-repeat center center / cover;
+    background: url("../imgs/bgs/jett_animate.gif") no-repeat center center / cover;
     display: grid;
     grid-template-rows: 150px 1fr;/* Colocar ou tirar o 150px para o navbar */
 }
