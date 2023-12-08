@@ -14,7 +14,8 @@ body {
     height: 100vh;
     background: url("../imgs/bgs/bg1.jpg") no-repeat center center / cover;
     display: grid;
-    grid-template-rows: 1fr;
+    grid-template-rows: 150px 1fr;
+    /* Colocar ou tirar o 150px para o navbar */
 }
 
 .navbar {
@@ -38,37 +39,54 @@ body {
 }
 
 .navItems a {
+    position: relative;
     text-decoration: none;
     color: #f8f8f8;
+    transition: .25s ease;
+}
+
+.navItems a:after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    border-radius: 3px;
+    left: 0;
+    bottom: 0;
+    background-color: #ff4655;
+    transition: .25s ease;
+}
+
+.navItems a:hover::after {
+    width: 100%;
 }
 
 .navItems img {
     height: 100px;
 }
 
-
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh);/* caso eu queirar tirar o navbar só tirar o 150px */
-    
-    /* overflow: hidden; */
+    height: calc(100vh - 150px);
+    /* caso eu queirar tirar o navbar só tirar o 150px */
+    overflow: hidden;
     background: linear-gradient(315deg, rgba(25, 25, 25, .7) 0%, rgba(97, 67, 133, .6) 90%),
         url(https://grainy-gradients.vercel.app/noise.svg);
+
+    overflow: hidden;
 }
 
 .jett {
     display: grid;
-    /* justify-content: center; */
     position: absolute;
     width: 100%;
-    height: calc(100vh);  /* caso eu queirar tirar o navbar só tirar o 150px */
-   
-    overflow: hidden; /*caso eu queirar tirar o navbar só colocar o hidden */
+    height: calc(100vh - 150px);
+    /* caso eu queirar tirar o navbar só tirar o 150px */
+    overflow: hidden;
+    /*caso eu queirar tirar o navbar só colocar o hidden */
     z-index: 0;
-
-    /* mix-blend-mode: screen; */
 }
 
 .jett video {
@@ -87,9 +105,6 @@ body {
     background: linear-gradient(180deg, transparent 0%, rgba(97, 67, 133, .6) 100%)
 }
 
-
-
-
 .products {
     display: grid;
     width: 100%;
@@ -103,23 +118,170 @@ body {
     display: grid;
     gap: 15px;
     color: #f8f8f8;
-    font-size: 54px;
+    font-size: 48px;
     font-weight: bold;
     list-style-type: none;
     width: fit-content;
 }
 
 .list {
-    width: fit-content;
-    cursor: pointer;    
+    cursor: pointer;
+    text-transform: uppercase;
+    width: 100%;
 }
 
-.list a {
+.list a,
+.list i {
     text-decoration: none;
     color: #f8f8f8;
     transition: .25s ease;
 }
 
-.list:hover a{
-    color: #ff4655
+.list i {
+    width: 50px;
+    font-size: 42px;
+}
+
+.list:hover a {
+    color: #ff4655;
+}
+
+.list:hover:nth-child(1) i {
+    color: #5865F2;
+}
+
+.list:hover:nth-child(2) i {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.list:hover:nth-child(3) i {
+    color: #191919;
+}
+
+.list:hover:nth-child(4) i {
+    color: #25D366
+}
+
+
+.assets {
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 150px);
+
+    color: #f8f8f8;
+}
+
+.arrows {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    /* width: 100%; */
+    height: calc(100% - 70px);
+    padding: 35px 100px;
+}
+
+.arrows i {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+}
+
+.arrows .left {
+    justify-content: start;
+    animation: leftAnimation 7s ease-out infinite;
+    animation-delay: calc(var(--delay) * 5s);
+}
+
+.arrows .right {
+    justify-content: end;
+    animation: rightAnimation 10s ease-out infinite;
+    animation-delay: calc(var(--delay) * 5s);
+}
+
+.fa-sort-up {
+    display: grid !important;
+    align-items: end;
+}
+
+.arrows .fa-sort-down:nth-child(2),
+.arrows .fa-sort-down:nth-child(3),
+.arrows .fa-sort-up:nth-child(6),
+.arrows .fa-sort-up:nth-child(7) {
+    animation: randomAnimation 13s ease-out infinite;
+    animation-delay: calc(var(--delay) * 5s);
+}
+
+@keyframes leftAnimation {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(0);
+    }
+
+    50%,
+    75% {
+        transform: translateX(50px);
+    }
+}
+
+@keyframes rightAnimation {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(0);
+    }
+
+    50%,
+    75% {
+        transform: translateX(-50px);
+    }
+}
+
+@keyframes randomAnimation {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(50px);
+    }
+
+    50% {
+        transform: translateX(0px);
+    }
+
+    75% {
+        transform: translateX(-50px);
+    }
+}
+
+
+.sideTextContainer {
+    position: absolute;
+    transform: rotate(90deg);
+    right: calc(0px - 300px);
+    width: 700px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.sideTextContainer span {
+    font-size: 50px;
+    color: #f8f8f8;
+    font-weight: bold;
 }

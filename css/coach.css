@@ -37,8 +37,39 @@ body {
 }
 
 .navItems a {
+    position: relative;
     text-decoration: none;
     color: #f8f8f8;
+    transition: .25s ease;
+}
+
+.navItems a:after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    border-radius: 3px;
+    left: 0;
+    bottom: 0;
+    background-color: #ff4655;
+    transition: .25s ease;
+}
+
+.navItems a:hover::after {
+    width: 100%;
+}
+
+.navItems li:nth-child(5) a::after {
+    content: '';
+    position: absolute;
+    width: calc(100% + 10px);
+    transform: translateX(-5px);
+    height: 3px;
+    border-radius: 3px;
+    left: 0;
+    bottom: 0;
+    background-color: #ff4655;
+    transition: .25s ease;
 }
 
 .navItems img {
