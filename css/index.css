@@ -21,7 +21,9 @@ body {
 .navbar {
     display: flex;
     align-items: center;
-    background-color: #191919;
+    background: linear-gradient(315deg, rgba(25, 25, 25, .7) 0%, rgba(97, 67, 133, .6) 90%),
+        url(https://grainy-gradients.vercel.app/noise.svg);
+    ;
     height: 150px;
     position: relative;
     width: 100%;
