@@ -367,3 +367,13 @@ body {
     --button-text-color-hover: #ece8e1;
     --button-bits-color-hover: #ece8e1;
 }
+
+@media only screen and (min-width: 1280px) {
+    .container {
+        width: 90%;
+    }
+
+    .elos {
+        grid-template-columns: 1fr 100px 1fr;
+    }
+}

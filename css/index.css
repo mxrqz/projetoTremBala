@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;700&display=swap');
 
+:root {
+    --background-color: #191919;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -12,9 +16,10 @@ body {
 .main {
     width: 100%;
     height: 100vh;
-    background: url("../imgs/bgs/jett_animate.gif") no-repeat center center / cover;
+    background: url("../imgs/bgs/background.jpg") no-repeat center center / cover;
     display: grid;
-    grid-template-rows: 150px 1fr;/* Colocar ou tirar o 150px para o navbar */
+    grid-template-rows: 150px 1fr;
+    /* Colocar ou tirar o 150px para o navbar */
 }
 
 .navbar {
@@ -144,6 +149,10 @@ body {
     font-size: 42px;
 }
 
+.list a {
+    font-weight: 500;
+}
+
 .list:hover a {
     color: #ff4655;
 }
@@ -164,6 +173,151 @@ body {
 
 .list:hover:nth-child(4) i {
     color: #25D366
+}
+
+.btnA {
+    position: absolute;
+    z-index: 2;
+}
+
+.btn {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    background: none;
+    padding: 0;
+    color: var(--button-text-color);
+    cursor: pointer;
+    --button-text-color: var(--background-color);
+    --button-text-color-hover: var(--button-background-color);
+    --border-color: #7D8082;
+    --button-background-color: #ece8e1;
+    --highlight-color: #ff4655;
+    --button-inner-border-color: transparent;
+    --button-bits-color: var(--background-color);
+    --button-bits-color-hover: var(--button-background-color);
+    position: relative;
+    padding: 8px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 24px;
+    -webkit-transition: all .15s ease;
+    transition: all .15s ease;
+}
+
+.btn::before,
+.btn::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: calc(50% - 5px);
+    border: 1px solid var(--border-color);
+    -webkit-transition: all .15s ease;
+    transition: all .15s ease;
+}
+
+.btn::before {
+    top: 0;
+    border-bottom-width: 0;
+}
+
+.btn::after {
+    bottom: 0;
+    border-top-width: 0;
+}
+
+.btn:active,
+.btn:focus {
+    outline: none;
+}
+
+.btn:active::before,
+.btn:active::after {
+    right: 3px;
+    left: 3px;
+}
+
+.btn:active::before {
+    top: 3px;
+}
+
+.btn:active::after {
+    bottom: 3px;
+}
+
+.btn__inner {
+    position: relative;
+    display: block;
+    padding: 20px 30px;
+    background-color: var(--button-background-color);
+    overflow: hidden;
+    -webkit-box-shadow: inset 0px 0px 0px 1px var(--button-inner-border-color);
+    box-shadow: inset 0px 0px 0px 1px var(--button-inner-border-color);
+}
+
+.btn__inner::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 2px;
+    background-color: var(--button-bits-color);
+}
+
+.btn__inner::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 4px;
+    height: 4px;
+    background-color: var(--button-bits-color);
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+.btn__slide {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: -1px;
+    left: -8px;
+    width: 0;
+    background-color: var(--highlight-color);
+    -webkit-transform: skew(-15deg);
+    transform: skew(-15deg);
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+.btn__content {
+    position: relative;
+}
+
+.btn:hover {
+    color: #f8f8f8;
+}
+
+.btn:hover .btn__slide {
+    width: calc(100% + 15px);
+}
+
+.btn:hover .btn__inner::after {
+    background-color: var(--button-bits-color-hover);
+}
+
+.btn--light {
+    --button-background-color: var(--background-color);
+    --button-text-color: var(--highlight-color);
+    --button-inner-border-color: var(--highlight-color);
+    --button-text-color-hover: #ece8e1;
+    --button-bits-color-hover: #ece8e1;
 }
 
 
@@ -276,14 +430,19 @@ body {
     transform: rotate(90deg);
     right: calc(0px - 300px);
     width: 700px;
-
     display: flex;
     justify-content: space-between;
 }
 
-
 .sideTextContainer span {
     font-size: 50px;
     color: #f8f8f8;
-    font-weight: bold;
+    font-weight: 500;
+}
+
+@media only screen and (min-width: 1280px) {
+    .sideTextContainer {
+        right: calc(0px - 230px);
+        width: 545px;
+    }
 }

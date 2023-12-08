@@ -207,14 +207,6 @@ body {
     font-weight: 900;
 }
 
-
-
-
-
-
-
-
-
 .btn {
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -362,4 +354,14 @@ body {
     --button-inner-border-color: var(--highlight-color);
     --button-text-color-hover: #ece8e1;
     --button-bits-color-hover: #ece8e1;
+}
+
+@media only screen and (min-width: 1280px) {
+    .container {
+        width: 90%;
+    }
+
+    .elos {
+        grid-template-columns: 1fr 100px 1fr;
+    }
 }
